@@ -7,5 +7,5 @@ Prompt 2: My styling across the project still doesn't look as good as I want it 
 - Geändert/Verstanden: mehr wissen über CSS und styling optionen
 
 Promt 3: I have encountered an error that says "TS7016: Could not find a declaration file for module ./composables/useNotes.js". I was able to create the @file:vue.d.ts file to handle the .vue errors but don't know how to resolve the issue for .js files
--Übernommen: Code in der tsconfig.app.json, allowJs: true
+- Übernommen: Code in der tsconfig.app.json, allowJs: true
 - Geändert/Verstanden: Der Complier muss .js Dateien auch als TypeScript Dateien behandeln damit ich die GitHub Pages Seite deployen kann
