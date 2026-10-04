@@ -32,5 +32,12 @@ defineProps<Props>()
     .noteList {
         display: flex;
         flex-direction: column;
+        max-width: 800px;
+        margin: 0 auto;
+        align-items: center;
+        gap: 10px;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #ffffff;
     }
 </style>

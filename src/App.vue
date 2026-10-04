@@ -13,7 +13,10 @@ const visibleNotes = filteredNotes(searchTerm)
 </script>
 
 <template>
+    <h1>Notes App</h1>
     <NoteForm @add="addNote"/>
+    <h3>Search</h3>
     <SearchBar v-model="searchTerm"/>
+    <h3>Your Notes</h3>
     <NoteCard :notes="visibleNotes"/>
 </template>
