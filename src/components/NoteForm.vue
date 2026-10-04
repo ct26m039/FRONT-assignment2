@@ -22,55 +22,60 @@ function submit() {
 </script>
 
 <template>
-    <div class="add-form">
-        <form @submit.prevent="submit">
-            <input v-model="newNote.title" placeholder="Title" />
-            <textarea v-model="newNote.content" placeholder="Content"></textarea>
-            <input v-model="newNote.tags" placeholder="Tags" />
-            <button type="submit" class="submit-button">Submit</button>
-        </form>
-    </div>
+    <form class="add-form" @submit.prevent="submit">
+        <input v-model="newNote.title" placeholder="Title" />
+        <textarea v-model="newNote.content" placeholder="Content" rows="4"></textarea>
+        <input v-model="newNote.tags" placeholder="Tags (comma-separated)" />
+        <button type="submit" class="submit-button">Submit</button>
+    </form>
 </template>
 
 <style scoped>
     .add-form {
-        display: contents;
+        display: flex;
         flex-direction: column;
-        width: 100%;
-        padding: 10px;
-        color: #333;
-        max-width: 75%;
-        margin: 0 auto;
         align-items: center;
-
+        gap: 10px;
+        width: 100%;
     }
 
-     input {
-         padding: 10px;
-         border-radius: 5px;
-         border: 1px solid #ccc;
-         font-size: 16px;
-         align-content: center;
-         width: 75%;
-     }
+    input,
+    textarea {
+        width: 75%;
+        padding: 10px;
+        border: 1px solid var(--border);
+        border-radius: 5px;
+        background: var(--bg);
+        color: var(--text-h);
+        font-size: 16px;
+        box-sizing: border-box;
+        transition: border-color 0.2s, box-shadow 0.2s;
+    }
 
-     textarea {
-         padding: 10px;
-         border: 1px solid #ccc;
-         border-radius: 5px;
-         font-size: 16px;
-         align-content: center;
-         width: 75%;
-     }
+    textarea {
+        resize: vertical;
+    }
 
-     .submit-button {
-         padding: 10px;
-         border: none;
-         border-radius: 5px;
-         background-color: #007bff;
-         color: #fff;
-         cursor: pointer;
-         font-size: 16px;
-         width: 75%;
-     }
+    input:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+    }
+
+    .submit-button {
+        width: 75%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    .submit-button:hover {
+        background-color: #0069d9;
+    }
 </style>

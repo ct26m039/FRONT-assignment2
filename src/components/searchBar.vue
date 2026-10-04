@@ -11,14 +11,24 @@ defineEmits(['update:modelValue'])
   >
 </template>
 
-<style>
+<style scoped>
     input {
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        font-size: 16px;
-        align-items: center;
+        display: block;
         width: 75%;
         margin: 0 auto;
+        padding: 10px;
+        border: 1px solid var(--border);
+        border-radius: 5px;
+        background: var(--bg);
+        color: var(--text-h);
+        font-size: 16px;
+        box-sizing: border-box;
+        transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
     }
 </style>
